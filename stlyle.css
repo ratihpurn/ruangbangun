@@ -1,0 +1,61 @@
+/* Add styles here */
+*{font-family: Verdana, Geneva, Tahoma, sans-serif ;}
+.tengah{display: flex;justify-content: center;}
+.card{
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px; 
+    transition: 0.3s;
+}
+.card h1{ 
+    font-size: 16px;
+    padding:0px 5px;
+}
+
+.cardbody{
+    padding: 2px 16px;
+}
+
+.cardfooter{
+    padding : 8px;
+    background-color: bisque;
+    display: flex;
+    justify-content: right;
+}
+
+.card :hover{
+    font-size: 14px;
+    font-weight:bold;
+}
+
+label{
+    font-size: 14px;
+    font-weight: bold;
+}
+input [taype=text]{
+    width: 80%;
+    padding: 10px 15px;
+    margin: 8px 10px;
+}
+
+.btn1{
+    border: none;
+    border-radius: 8px;
+    background-color: beige;
+    color: blueviolet;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px20px;
+}
+.hsl{
+    font-size: 14px;
+    margin : 10px;
+    height: 200px;
+    width : 90%;
+    padding : 10px;
+    border: solid #C0C0C0 1px;
+    margin: 10px;
+background-color:pink ;
+
+}
+
+     
