@@ -1,72 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HITUNG RUANG BANGUN PERSEGUI</title>
-  <link href='/style.css' rel='stylesheet'>
+<body>
+<div class="tengh">
+</div class= "cardboy">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Luas dan Keliling Segitiga</title>
+    
 </head>
 <body>
-  <h1> RUANG BANGUN PERSEGI</h1>
+
+<h1>Menghitung Luas dan Keliling Segitiga</h1>
+<form id="segitigaForm">
+    <label for="alas">Alas:</label>
+    <input type="text" id="alas" name="alas" required>
+
+    <label for="tinggi">Tinggi:</label>
+    <input type="text" id="tinggi" name="tinggi" required>
+
+    <label for="Luas"> hasil</label>:</label>
+    <input type="text" id="luas" name="luas" disabled>
+
   
-<div class="tengah">
-  <div class="card">
-    
+    <input type="text" id="keliling" name="keliling" disabled>
 
-   <div class="cardbody">
-
-   <form> 
-    
-       <label> Nilai Panjang</label>
-           <input type="text" id="PJ">
-     <label>Nilai lebar</label>
-     <input type="text" id="LB">
-    </form>
-
-    <div class="hsl" id="hasil">hasil
-
-    </div>
-
-   </div>
-    <div class="cardfooter">
-      <button class="btn1" onclick="Hitung()">Hiitung</button>
-
-    </div>
-  </div>
-  
-</div>
-
+    <input type="button" value="Hitung" onclick="hitung()">
+</form>
 
 <script>
- function Hitung(){
-    var pj = document.getElementById("PJ").value
-    var lb = document.getElementById("LB").value
-    var luas = pj*lb
-    var res = "hitung luas persegi<br>nilai panjang"+pj+", dan lebarnya"+lb+" menjadi:<br>Luas = panjang Xlebar  luas = "+pj+" X " + lb+" <br>luas ="+luas
-    var pjlb = Number(pj)+Number(lb)
-    var kll= 2*pjlb
-    res += "<br><br>keliling persegi<br>keliling = 2 x (panjang+lebar)"
-    res += "<br>keliling =2 X ("+pj+ "+" +lb+")"
-  
-    res +="<br>keliling=2 x "+pjlb
-    res +="<br>keliling ="+kll
+function hitung() {
+    var alas = parseFloat(document.getElementById("alas").value);
+    var tinggi = parseFloat(document.getElementById("tinggi").value);
     
-    
-    document.getElementById("hasil").innerHTML =res
+    if (isNaN(alas) || isNaN(tinggi)) {
+        alert("Silakan masukkan angka yang valid.");
+        return;
+    }
+
+    var luas = (alas * tinggi) / 2;
+    var sisiMiring = Math.sqrt((alas * alas) + (tinggi * tinggi));
+    var keliling = alas + tinggi + sisiMiring;
+
+    document.getElementById("luas").value = luas.toFixed(2);
+    document.getElementById("keliling").value = keliling.toFixed(2);
 }
 </script>
 
-
-<body>
+</body>
 </html>
-
-    
-               
-
-  
-
-
-
-
-     
-  
